@@ -352,40 +352,46 @@
     TogetherROS vs ROS2
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="TogetherROS vs ROS2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     通信效率量化对比
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#cv" class="md-nav__link">
     CV图像处理量化对比
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     模型推理
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     传感器驱动管理
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     机器人开发工具
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -939,40 +945,46 @@
     TogetherROS vs ROS2
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="TogetherROS vs ROS2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     通信效率量化对比
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#cv" class="md-nav__link">
     CV图像处理量化对比
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     模型推理
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     传感器驱动管理
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     机器人开发工具
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1011,7 +1023,7 @@
 <p><img alt="image-20220613205127358" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205127358.png" /></p>
 <p>TogetherROS就是在这样一个ROS2架构的基础上，继续进行了优化，原本DDS通信的部分依然保留，可以适配不同厂家的DDS通信系统，在此之上，针对功能性的组件进行了众多优化和补充，在上一节中我们也给大家介绍了这套框架。</p>
 <p>优化之后的TogetherROS系统，在数据传输和AI处理方面，到底有多少提升呢，我们来看具体的对比数据。</p>
-<h2 id="_1"><strong>通信效率量化对比</strong></h2>
+<h3 id="_1"><strong>通信效率量化对比</strong></h3>
 <p>先来看下操作系统至关重要的数据通信功能，我们针对ROS中最为常用的大数据传输模式——话题通信进行了测试。</p>
 <p><img alt="image-20220613205218719" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205218719.png" /></p>
 <p>在单元测试中，使用同样的算力平台，分别安装TogetherROS和ROS2系统，然后在其中运行一个话题通信的发布者与订阅者，实现不同数据量的传输。经过数据统计，我们可以看到，在数据通信延时方面，随着数据量的增加，ROS2系统在通信延时、发送端和接收端的CPU占用率上，都会程线性增加，可以预想，在数据量较大的情况下，系统的通信负荷会非常严重。</p>
@@ -1019,20 +1031,20 @@
 <p><img alt="image-20220613205239165" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205239165.png" /></p>
 <p>在场景测试中，我们尽量模拟真实机器人的应用，使用TogetherROS和ROS2系统连接了多个相机、雷达和里程计等传感器，作为大量数据的输入来源，继续进行了测试，结果和之前的单元测试类似，ROS2系统此时的CPU占用率已经超过90%，想要运行数据传输之外的应用功能，几乎是不可能的，通信延时也达到了15ms以上，这在某些实时性要求比较高的应用中，是不可接受的。</p>
 <p>而在TogetherROS系统中，CPU占用和通信延时也微乎其微，更多系统资源都可以让给应用处理。</p>
-<h2 id="cv"><strong>CV图像处理量化对比</strong></h2>
+<h3 id="cv"><strong>CV图像处理量化对比</strong></h3>
 <p>再来看下智能机器人中视觉感知层面的处理，TogetherROS系统集成了地平线Hobot CV视觉加速库，通过底层芯片中的硬件引擎，软硬件协同，可以提升常用CV算子的性能，降低系统资源的消耗，例如高斯滤波、图像缩放、畸变校正等常用的视觉处理方法。</p>
 <p><img alt="image-20220613205311900" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205311900.png" /></p>
 <p>而且在接口风格上兼容OpenCV，可以做到与OpenCV混合编程，便于视觉应用的开发。</p>
 <p><img alt="image-20220613205323200" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205323200.png" /></p>
 <p>具体测试CV加速库的效率，与OpenCV中软件实现的效率进行对比，我们分别对比图像缩放的帧率，图像旋转的帧率，高斯滤波的帧率，通过Hobot CV视觉加速库运行的帧率可以做到OpenCV的2到3倍，甚至更多倍。</p>
-<h2 id="_2"><strong>模型推理</strong></h2>
+<h3 id="_2"><strong>模型推理</strong></h3>
 <p>在AI处理方面，ROS2原生系统中并没有太多支持，只能依赖社区中的资源，很难充分发挥硬件的算力。</p>
 <p><img alt="image-20220613205420324" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205420324.png" /></p>
 <p>对此，TogetherROS系统集成了Hobot DNN模型推理库，集成了众多开源模型，借助底层芯片中的AI引擎BPU，提供充足的算力保障，开发者实际使用中，就不用花费很多时间在模型的调教和数据的训练上，基于这套系统，很快就可以部署人工智能应用啦。</p>
-<h2 id="_3"><strong>传感器驱动管理</strong></h2>
+<h3 id="_3"><strong>传感器驱动管理</strong></h3>
 <p><img alt="image-20220613205454043" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205454043.png" /></p>
 <p>在传感器层面，是大量数据传输的来源，TogetherROS也重点进行了优化，针对常用的传感器类型，系统中内置参数配置、系统调用和内存管理机制，同样是在芯片的硬件层面进行了加速和隔离，保障数据流的稳定生成。</p>
-<h2 id="_4"><strong>机器人开发工具</strong></h2>
+<h3 id="_4"><strong>机器人开发工具</strong></h3>
 <p>机器人开发过程中的性能优化和调试，也是非常繁杂的工作，TogetherROS系统自带火焰图等工具，可以实现系统层面的调优和测试，便于开发者挖掘系统性能。</p>
 <p><img alt="image-20220613205512713" src="../image/TogetherROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20220613205512713.png" /></p>
 <p>以上这些都是TogetherROS在ROS系统之上的优化和补充，未来更多特性也会不断迭代推出，让智能机器人的开发更加简单。</p>
