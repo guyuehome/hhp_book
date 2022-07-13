@@ -846,6 +846,68 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          机器人应用
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="机器人应用" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          机器人应用
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.1_SLAM%E5%BB%BA%E5%9B%BE/" class="md-nav__link">
+        SLAM地图构建
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.2_%E5%B0%8F%E8%BD%A6%E4%BA%BA%E4%BD%93%E8%B7%9F%E9%9A%8F/" class="md-nav__link">
+        小车人体跟随
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="https://class.guyuehome.com/all/10284445/19617453" class="md-nav__link">
         视频课程
@@ -1012,14 +1074,13 @@
 <h2 id="_1"><strong>高斯滤波</strong></h2>
 <p>我们先来看下图像处理中常用的高斯滤波算法，OpenCV和hobotcv，正面PK一下，我们也看看在程序中如何使用hobotcv的图像处理加速算法。</p>
 <h3 id="_2"><strong>运行示例程序</strong></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ <span class="nb">cd</span> /opt/tros/hobotcv_gaussian/sample
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ ./build.sh
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ <span class="nb">cd</span> output
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>$ ./run.sh
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ <span class="nb">source</span> /opt/tros/setup.bash
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cp -r /opt/tros/lib/hobot_cv/config/ .
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ ros2 launch hobot_cv hobot_cv_gaussian_blur.launch.py
 </code></pre></div>
 <p><img alt="image-20220614161955297" src="../image/TogetherROS%E8%A7%86%E8%A7%89%E4%B8%8EAI%E5%BA%94%E7%94%A8/image-20220614161955297.png" /></p>
 <h3 id="_3"><strong>代码解析</strong></h3>
-<p>hobotcv_sample.cpp：</p>
+<p>代码地址：https://c-gitlab.horizon.ai/HHP/box/hobot_cv/-/blob/develop/test/test_gaussian_blur.cpp</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Copyright (c) 2021 Horizon Robotics.All Rights Reserved.</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">//</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">// The material in this file is confidential and contains trade secrets</span>
@@ -1156,11 +1217,17 @@
 <p>再来看另外一个案例，图像的裁剪与缩放，比如这样一幅图片，我们尝试剪裁左上角的一小块图像出来，或者对裁剪的某一块图像放大来看看。</p>
 <p><img alt="image-20220614162116878" src="../image/TogetherROS%E8%A7%86%E8%A7%89%E4%B8%8EAI%E5%BA%94%E7%94%A8/image-20220614162116878.png" /></p>
 <h3 id="_5"><strong>运行示例程序</strong></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ <span class="nb">source</span> /opt/tros/setup.bash 
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$ cp -r /opt/tros/lib/hobot_cv/config/ .
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$ ros2 run hobot_cv example
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 配置TogetherROS环境</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">source</span> /opt/tros/setup.bash
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 从TogetherROS的安装路径中拷贝出运行示例需要的模型和配置文件。</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>cp -r /opt/tros/lib/hobot_cv/config/ .
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># 启动launch文件</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>ros2 launch hobot_cv hobot_cv_crop_resize.launch.py
 </code></pre></div>
 <h3 id="_6"><strong>代码解析</strong></h3>
+<p>代码地址：https://c-gitlab.horizon.ai/HHP/box/hobot_cv/-/blob/develop/src/test.cpp</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Copyright (c) 2021 Horizon Robotics.All Rights Reserved.</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">//</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">// The material in this file is confidential and contains trade secrets</span>

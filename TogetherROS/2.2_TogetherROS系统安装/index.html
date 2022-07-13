@@ -887,6 +887,68 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          机器人应用
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="机器人应用" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          机器人应用
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.1_SLAM%E5%BB%BA%E5%9B%BE/" class="md-nav__link">
+        SLAM地图构建
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.2_%E5%B0%8F%E8%BD%A6%E4%BA%BA%E4%BD%93%E8%B7%9F%E9%9A%8F/" class="md-nav__link">
+        小车人体跟随
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="https://class.guyuehome.com/all/10284445/19617453" class="md-nav__link">
         视频课程
@@ -1109,56 +1171,56 @@
 </ul>
 <p>硬件准备齐全之后，就可以进入第二步了。</p>
 <h2 id="ubuntu"><strong>安装Ubuntu系统</strong></h2>
-<p>我们来给旭日X3派安装Ubuntu系统，关于系统镜像和烧写工具，都可以在地平线AI社区中找到。</p>
+<p>我们来给旭日X3派安装Ubuntu系统，关于系统镜像和烧写工具，都可以在<a href="https://developer.horizon.ai/resource">地平线AI社区</a>中找到。</p>
 <p><img alt="image-20220613211442436" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20220613211442436.png" /></p>
 <h3 id="sd"><strong>下载SD卡镜像</strong></h3>
 <p>首先登录地平线AI社区，点击”产品中心——资源中心“，</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_21%2015_28_11%20%282%29.png" /></p>
-<p>进入页面后下拉至”X3派资料包“专区，点击下载其中的”旭日X3派系统镜像“，会有一个压缩包，把它保存到当前电脑桌面。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_21%2016_01_56%20%282%29.png" /></p>
+<p><img alt="50" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/50.png" /></p>
+<p>进入页面后下拉至”X3派资料包“专区，其中有两个镜像，点击下载其中的”旭日X3派系统镜像（服务版）“，会有一个压缩包，把它保存到当前电脑桌面。</p>
+<p><img alt="41" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/41.png" /></p>
 <p>此外，我们稍后将镜像烧写到SD卡里，需要用到烧写小工具，如果大家电脑上没有合适的工具，可以下拉到”工具“专区，点击下载”烧录 工具rufus"。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_21%2016_29_55%20%282%29.png" /></p>
+<p><img alt="40" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/40.png" /></p>
 <p>下载完后我们来看一下两个压缩文件中的内容：</p>
 <p>其中一个是烧写X3派镜像文件的工具，压缩包中有两个文件，一个是system_sdcard.img文件，是我们稍后会用于烧写SD卡的镜像文件；另一个是disk_nand.img文件，用于烧写旭日X3派中的flash文件，大多数情况下都用不到；</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_21%2016_57_21%20%282%29.png" /></p>
+<p><img alt="39" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/39.png" /></p>
 <p>另一个压缩包里是我们稍后用于烧写镜像的rufus工具。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_21%2017_07_58%20%282%29.png" /></p>
+<p><img alt="33" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/33.png" /></p>
 <p>我们把两个压缩包都解压出来，然后把SD卡放进读卡器、插到电脑端</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_05_12.png" /></p>
+<p><img alt="32" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/32.png" /></p>
 <p>接下来就可以开始烧写SD卡镜像。</p>
 <h3 id="sd_1"><strong>烧写SD卡镜像</strong></h3>
 <p>运行解压出来的烧写工具rufus。启动后需要确认几个参数：</p>
 <p>第一个是确定烧写到哪个磁盘上。工具软件会默认搜索当前读取到的SD卡，下图所示磁盘名称，就是演示时插好的16GB的SD卡。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_05_28.png" /></p>
+<p><img alt="30" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/30.png" /></p>
 <p>下一步我们点击“选择”，找到需要烧写的镜像文件。演示中已经把需要的system_sdcrd.img文件放在了桌面上，选中它点击“打开”；</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_05_46.png" /></p>
+<p><img alt="28" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/28.png" /></p>
 <p>下面的内容就可以用默认的配置，点击“开始”会弹出警告告诉我们将把磁盘里的所有文件都清除掉，这没有问题，我们点击“选择“，就开始烧写SD卡镜像了。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_05_54.png" /></p>
+<p><img alt="29" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/29.png" /></p>
 <p>进度条显示“准备就绪”后，点击“关闭”，此时你的SD卡镜像就已经烧写完成了，我们把SD卡的读卡器拔出来。</p>
 <h3 id="_2"><strong>连接串口</strong></h3>
 <p>接下来把SD卡插到旭日X3派上。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_11_01%20%282%29.png" /></p>
+<p><img alt="1" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/1.png" /></p>
 <p>把串口模块连接到电脑的USB上。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20220613212949327.png" /></p>
+<p><img alt="image-20220613212949327" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20220613212949327.png" /></p>
 <p>连接好串口模块后，为了确保串口已经跟电脑连接成功、并且安装好了驱动，我们可以右键“我的电脑”图标、选择“管理”，在打开的”计算机管理“界面中找到”设备管理器——端口“，检查一下你的USB串口是否已经显示出了对应的设备。演示中的端口号为COM6,说明串口已经成功驱动了。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_11_29.png" /></p>
+<p><img alt="2" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.png" /></p>
 <p>如果没有看到自己的设备号、或者设备号前有一个叹号或者问号标记，说明你的驱动没有安装好，可以搜索网络上的技术博客，来完成串口模块的驱动安装。</p>
 <p>关闭“计算机管理”窗口，接下来就要通过串口与旭日X3派进行连接了。这里我们需要用到一个串口小工具，大家可以使用自己常用的工具。</p>
 <p>演示中使用的串口工具是MobaXterm,十分推荐大家使用这个工具，里面集成了开发过程中需要使用的各种小工具，我们后续的串口通讯、SSH网络通讯，都会使用这些工具完成。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_42_04.png" /></p>
+<p><img alt="3" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/3.png" /></p>
 <p>打开MobaXterm,点击左上角的"Session"；</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_48_25.png" /></p>
+<p><img alt="4" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/4.png" /></p>
 <p>找到里面的“Serial"串口选项，点击打开；串口号选择本机连接到旭日X3派的相应端口，演示中为COM6;</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_48_33.png" /></p>
+<p><img alt="5" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/5.png" /></p>
 <p>波特率选择921600。选项好后点击“OK”。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_48_37.png" /></p>
+<p><img alt="6" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/6.png" /></p>
 <p>现在串口已经连接成功了，但当前旭日X3派的板子还没有上电，所以没有任何信息弹出。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_48_42.png" /></p>
+<p><img alt="7" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/7.png" /></p>
 <p>我们把电源线与旭日X3派连接好。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_22%2015_48_57.png" /></p>
+<p><img alt="8" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/8.png" /></p>
 <p>可以看到弹出了日志提醒：“当前系统正在启动”。等待系统加载完成。</p>
 <p>现在可以看到系统已经加载成功了。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.%E7%83%A7%E5%BD%95Ubuntu%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%20-%20Google%20Chrome%202022_6_23%2015_39_27%20%282%29.png" /></p>
+<p><img alt="9" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/9.png" /></p>
 <h3 id="_3"><strong>串口登录系统</strong></h3>
 <p>接下来我们需要登录系统。我们有两个账号可以用来登录：</p>
 <ul>
@@ -1170,10 +1232,10 @@
 </li>
 </ul>
 <p>这里演示使用root用户来登录。输入用户名、密码，回车，需要等待大约1分钟，因为第一次登录需要展开一些系统必要的安装软件，安装好后系统会自动重启。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.%E7%83%A7%E5%BD%95Ubuntu%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%20-%20Google%20Chrome%202022_6_23%2015_44_21%20%282%29.png" /></p>
+<p><img alt="10" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/10.png" /></p>
 <p>系统自动重启后，再次使用root用户登录。现在你的UBUNTU系统就已经安装好了。</p>
 <p>我们可以使用LINUX系统常用的一些命令行进行查看和设置，比如ls查看当前命令，pwd查看当前路径，还可以使用mkdir命令创建文件夹，比如这里,一个test文件夹就创建成功了。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.%E7%83%A7%E5%BD%95Ubuntu%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%20-%20Google%20Chrome%202022_6_23%2015_46_43%20%282%29.png" /></p>
+<p><img alt="11" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/11.png" /></p>
 <p>到这里为止，旭日X3派上的Ubuntu系统就安装成功啦，我们继续下一步。</p>
 <h2 id="togetherros_1"><strong>安装TogetherROS系统</strong></h2>
 <p>安装TogetherROS系统。</p>
@@ -1182,15 +1244,15 @@
 <p><img alt="image-20220613211632916" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20220613211632916-16551261936301.png" /></p>
 <h3 id="_4"><strong>配置有线网络</strong></h3>
 <p>接下来请大家拿一根网线，连接旭日X3派和电脑。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2011_15_22.png" /></p>
+<p><img alt="27" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/27.png" /></p>
 <p>然后，在电脑端打开控制面板，找到“查看网络状态和任务”。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2011_18_23.png" /></p>
+<p><img alt="26" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/26.png" /></p>
 <p>找到已经连接成功的以太网，点击它；</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2011_15_54.png" /></p>
+<p><img alt="25" src="/home/lql/hhp_book/docs/TogetherROS/image/TogetherROS系统安装与配置/25.png" /></p>
 <p>会弹出一个窗口，我们点击“属性”。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2011_16_03.png" /></p>
+<p><img alt="24" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/24.png" /></p>
 <p>再次弹出窗口，我们双击选择“Internet协议版本4”。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2014_53_55.png" /></p>
+<p><img alt="23" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/23.png" /></p>
 <p>然后会弹出一个配置IP地址的窗口，我们勾选”使用下面的IP地址“。</p>
 <p>按照如下信息填入：</p>
 <ul>
@@ -1205,21 +1267,21 @@
 </li>
 </ul>
 <p>我们使用的旭日X3派的板子IP为192.168.1.10，所以IP后三位除了.10和网关.1以外，大家可以选用1-255之间的任意数字，这里使用.100；</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2014_54_39.png" /></p>
+<p><img alt="22" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/22.png" /></p>
 <p>填写完在所有窗口点击“确定”，最后关闭窗口。现在网络的配置就完成了，此时电脑端的静态IP就是192.168.1.100,我们通过这个IP与旭日X3派产生连接。</p>
 <h3 id="ssh"><strong>SSH远程登录</strong></h3>
 <p>我们再次打开MobaXterm软件,点击左上角的"Session"，找到里面的"SSH",输入 旭日X3派板子的IP192.168.1.10，点击”OK“。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2015_28_08.png" /></p>
+<p><img alt="21" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/21.png" /></p>
 <p>弹出登录窗口，我们用root账户登录：用户名为root，密码为root。这里会弹窗询问是否保存登录密码，如果需要保存就点“YES”，不需要保存就点“NO”。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2015_32_37.png" /></p>
+<p><img alt="12" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/12.png" /></p>
 <p>现在我们就成功通过网络SSH协议登录到了旭日X3派板子上，和之前我们用串口登录的效果几乎是一样的，但现在我们是用网络通讯，所以现在通讯的效率和传输的速度会更高。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_6_30%2015_37_34.png" /></p>
+<p><img alt="13" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/13.png" /></p>
 <p>配置完成网络通讯后，我们来正式安装TogetherROS。</p>
 <h2 id="togetherros_2"><strong>下载TogetherROS安装包</strong></h2>
 <h3 id="_5"><strong>拷贝安装包</strong></h3>
 <p>我们打开地平线社区的网站，在“产品中心”页面下拉到“机器人平台”，这里面都是TogetherROS相关的资源。</p>
 <p>我们找到其中的"TogetherROS DEB安装包"，点击下载到电脑端。大概有300多兆的文件大小，很快就能下载完成。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_7_1%201_55_24.png" /></p>
+<p><img alt="14" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/14.png" /></p>
 <p>这里我们先使用DEB安装包，来直接安装编译好的二进制文件。未来课程中我们会介绍如何通过源码编译的方式进行安装。</p>
 <p>接下来我们进行TogetherROS镜像文件的复制安装。</p>
 <h3 id="togetherros_3"><strong>安装TogetherROS</strong></h3>
@@ -1229,14 +1291,14 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> $ scp .<span class="se">\t</span>ros_debV1_20220607894835.0.deb root@192.169.1.10:/userdata
 </code></pre></div>
 <p>这样就可以将TogetherROS镜像文件从电脑端拷贝到旭日X3派的userdata目录下。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_7_1%202_06_04.png" /></p>
+<p><img alt="15" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/15.png" /></p>
 <p>除了这种拷贝方法，大家还可以使用MobaXterm软件，它提供了一种基于SCP命令的可视化的文件复制方式。</p>
 <p>大家可以点击MobaXterm软件页面左侧的“SSH browser”，左边显示的目录就是旭日X3派板子上的文件目录结构。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_7_4%2011_11_34.png" /> </p>
+<p><img alt="16" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/16.png" /></p>
 <p>我们找到板子上对应的userdata文件夹，双击打开它。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_7_4%2011_15_01.png" /></p>
+<p><img alt="17" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/17.png" /></p>
 <p>使用MobaXterm软件，可以把togetherROS镜像文件从电脑本机上直接拖到板子的文件目录底下。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_7_4%2011_15_35.png" /></p>
+<p><img alt="18" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/18.png" /></p>
 <p>现在TogetherROS安装包已经传输完成。我们在命令行中进入板子的userdata文件夹下，再确认安装包已经存放到了文件夹。命令行：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ <span class="nb">cd</span> /userdata/
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$ ls
@@ -1245,10 +1307,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ dpkg -i tros_debV1_20220607094835.0.deb
 </code></pre></div>
 <p>等待安装完成，我们用命令“cd /opt"进入opt文件夹，用ls命令检查一下该路径下的文件，可以看到opt文件夹下有一个tros文件夹，这个文件夹里就是我们刚刚安装好的TogetherROS的所有系统文件了。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_7_4%2011_56_30.png" /></p>
+<p><img alt="19" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/19.png" /></p>
 <p>如果觉得终端里看不方便，也可以使用MobaXterm软件的可视化浏览器来查看。</p>
 <p>大家可以点击/opt/tros文件夹，看看其中的文件结构。</p>
-<p><img alt="" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/2.TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%20-%20Google%20Chrome%202022_7_4%2011_58_48.png" /></p>
+<p><img alt="20" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/20.png" /></p>
 <blockquote>
 <ul>
 <li>
