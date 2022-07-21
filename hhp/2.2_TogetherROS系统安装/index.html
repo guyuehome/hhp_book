@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#togetherros" class="md-skip">
+        <a href="#hhp" class="md-skip">
           跳转至
         </a>
       
@@ -459,11 +459,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#togetherros_1" class="md-nav__link">
-    安装TogetherROS系统
+  <a href="#hhptogetherros" class="md-nav__link">
+    安装HHP/TogetherROS
   </a>
   
-    <nav class="md-nav" aria-label="安装TogetherROS系统">
+    <nav class="md-nav" aria-label="安装HHP/TogetherROS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -480,29 +480,9 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#togetherros_2" class="md-nav__link">
-    下载TogetherROS安装包
-  </a>
-  
-    <nav class="md-nav" aria-label="下载TogetherROS安装包">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    拷贝安装包
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#togetherros_3" class="md-nav__link">
-    安装TogetherROS
+  <a href="#hhp_1" class="md-nav__link">
+    安装HHP
   </a>
   
 </li>
@@ -1106,11 +1086,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#togetherros_1" class="md-nav__link">
-    安装TogetherROS系统
+  <a href="#hhptogetherros" class="md-nav__link">
+    安装HHP/TogetherROS
   </a>
   
-    <nav class="md-nav" aria-label="安装TogetherROS系统">
+    <nav class="md-nav" aria-label="安装HHP/TogetherROS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1127,29 +1107,9 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#togetherros_2" class="md-nav__link">
-    下载TogetherROS安装包
-  </a>
-  
-    <nav class="md-nav" aria-label="下载TogetherROS安装包">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    拷贝安装包
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#togetherros_3" class="md-nav__link">
-    安装TogetherROS
+  <a href="#hhp_1" class="md-nav__link">
+    安装HHP
   </a>
   
 </li>
@@ -1173,7 +1133,7 @@
                 
 
 
-<h1 id="togetherros"><strong>TogetherROS系统安装</strong></h1>
+<h1 id="hhp"><strong>安装地平线机器人开发平台（HHP）</strong></h1>
 <p>我们在旭日X3派上安装系统镜像，并进一步完成TogetherROS系统的安装，大家如果手上有旭日X3派开发板的话，建议跟随一起操作。</p>
 <p><img alt="image-20220613211210773" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20220613211210773.png" /></p>
 <p>先来了解一下TogetherROS系统安装的整体流程：</p>
@@ -1266,8 +1226,8 @@
 <p>我们可以使用LINUX系统常用的一些命令行进行查看和设置，比如ls查看当前命令，pwd查看当前路径，还可以使用mkdir命令创建文件夹，比如这里,一个test文件夹就创建成功了。</p>
 <p><img alt="11" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/11.png" /></p>
 <p>到这里为止，旭日X3派上的Ubuntu系统就安装成功啦，我们继续下一步。</p>
-<h2 id="togetherros_1"><strong>安装TogetherROS系统</strong></h2>
-<p>安装TogetherROS系统。</p>
+<h2 id="hhptogetherros"><strong>安装HHP/TogetherROS</strong></h2>
+<p>接下来安装地平线机器人开发平台HHP，TogetherROS系统包含其中。</p>
 <p>为了达到更好的通信效率，我们后续使用有线网络连接旭日X3派，这里大家可以拿出一根网线，直接连接电脑和旭日X3派的网口。</p>
 <p>旭日X3派中出厂已经配置好了静态IP地址，是192.168.1.10，我们将使用的电脑也配置到同一网段即可。</p>
 <p><img alt="image-20220613211632916" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/image-20220613211632916-16551261936301.png" /></p>
@@ -1305,38 +1265,37 @@
 <p><img alt="12" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/12.png" /></p>
 <p>现在我们就成功通过网络SSH协议登录到了旭日X3派板子上，和之前我们用串口登录的效果几乎是一样的，但现在我们是用网络通讯，所以现在通讯的效率和传输的速度会更高。</p>
 <p><img alt="13" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/13.png" /></p>
-<p>配置完成网络通讯后，我们来正式安装TogetherROS。</p>
-<h2 id="togetherros_2"><strong>下载TogetherROS安装包</strong></h2>
-<h3 id="_5"><strong>拷贝安装包</strong></h3>
-<p>我们打开地平线社区的网站，在“产品中心”页面下拉到“机器人平台”，这里面都是TogetherROS相关的资源。</p>
-<p>我们找到其中的"TogetherROS DEB安装包"，点击下载到电脑端。大概有300多兆的文件大小，很快就能下载完成。</p>
-<p><img alt="14" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/14.png" /></p>
-<p>这里我们先使用DEB安装包，来直接安装编译好的二进制文件。未来课程中我们会介绍如何通过源码编译的方式进行安装。</p>
-<p>接下来我们进行TogetherROS镜像文件的复制安装。</p>
-<h3 id="togetherros_3"><strong>安装TogetherROS</strong></h3>
-<p>首先我们需要把电脑端的TogetherROS镜像文件，拷贝到旭日X3派板端。</p>
-<p>大家可以在电脑上右键打开一个终端，并使用scp命令进行文件拷贝，命令格式为：scp + 空格 + .\ + &lt;要拷贝的文件名&gt;  + 用户名 + @ + 旭日X3派的IP地址 + :/ +旭日X3派上的文件目录名。</p>
-<p>演示中使用的命令如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> $ scp .<span class="se">\t</span>ros_debV1_20220607894835.0.deb root@192.169.1.10:/userdata
+<p>配置完成网络通讯后，我们来正式安装HHP。</p>
+<h3 id="hhp_1"><strong>安装HHP</strong></h3>
+<p>我们在登录成功的SSH终端中，直接使用如下命令即可安装HHP：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ sudo apt install hhp
 </code></pre></div>
-<p>这样就可以将TogetherROS镜像文件从电脑端拷贝到旭日X3派的userdata目录下。</p>
-<p><img alt="15" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/15.png" /></p>
-<p>除了这种拷贝方法，大家还可以使用MobaXterm软件，它提供了一种基于SCP命令的可视化的文件复制方式。</p>
-<p>大家可以点击MobaXterm软件页面左侧的“SSH browser”，左边显示的目录就是旭日X3派板子上的文件目录结构。</p>
-<p><img alt="16" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/16.png" /></p>
-<p>我们找到板子上对应的userdata文件夹，双击打开它。</p>
-<p><img alt="17" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/17.png" /></p>
-<p>使用MobaXterm软件，可以把togetherROS镜像文件从电脑本机上直接拖到板子的文件目录底下。</p>
-<p><img alt="18" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/18.png" /></p>
-<p>现在TogetherROS安装包已经传输完成。我们在命令行中进入板子的userdata文件夹下，再确认安装包已经存放到了文件夹。命令行：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ <span class="nb">cd</span> /userdata/
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$ ls
+<p>等待安装完成：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ root@ubuntu:~# sudo apt install hhp
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Reading package lists... Done
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Building dependency tree       
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Reading state information... Done
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>The following NEW packages will be installed:
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  hhp
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">52</span> not upgraded.
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Need to get <span class="m">384</span> MB of archives.
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>After this operation, <span class="m">512</span> MB of additional disk space will be used.
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Get:1 http://42.62.85.28/ubuntu-ports focal/main arm64 hhp arm64 <span class="m">1</span>.0.1 <span class="o">[</span><span class="m">384</span> MB<span class="o">]</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Fetched <span class="m">384</span> MB <span class="k">in</span> 6min 43s <span class="o">(</span><span class="m">954</span> kB/s<span class="o">)</span>                                          
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Selecting previously unselected package hhp.
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="o">(</span>Reading database ... <span class="m">110406</span> files and directories currently installed.<span class="o">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>Preparing to unpack .../archives/hhp_1.0.1_arm64.deb ...
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>Unpacking hhp <span class="o">(</span><span class="m">1</span>.0.1<span class="o">)</span> ...
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>Setting up hhp <span class="o">(</span><span class="m">1</span>.0.1<span class="o">)</span> ...
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>Generating locales <span class="o">(</span>this might take a <span class="k">while</span><span class="o">)</span>...
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  en_US.ISO-8859-1... <span class="k">done</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  en_US.UTF-8... <span class="k">done</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>Generation complete.
 </code></pre></div>
-<p>确认完毕后，我们用LINUX命令行dpkg进行安装，命令格式为:"dpkg -i &lt;要安装的包的名称&gt;“，大家根据自己实际的版本号进行安装。此处使用命令为：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ dpkg -i tros_debV1_20220607094835.0.deb
+<p>安装完成后，查看/opt目录下的文件，可以看到已经安装：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ root@ubuntu:/userdata# ls /opt/
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tros
 </code></pre></div>
-<p>等待安装完成，我们用命令“cd /opt"进入opt文件夹，用ls命令检查一下该路径下的文件，可以看到opt文件夹下有一个tros文件夹，这个文件夹里就是我们刚刚安装好的TogetherROS的所有系统文件了。</p>
-<p><img alt="19" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/19.png" /></p>
 <p>如果觉得终端里看不方便，也可以使用MobaXterm软件的可视化浏览器来查看。</p>
 <p>大家可以点击/opt/tros文件夹，看看其中的文件结构。</p>
 <p><img alt="20" src="../image/TogetherROS%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/20.png" /></p>
